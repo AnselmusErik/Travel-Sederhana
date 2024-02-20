@@ -1,0 +1,117 @@
+.Container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.btn {
+    padding: 15px;
+    border: none;
+    color: yellow;
+    font-weight: bold;
+    background: rgb(1, 74, 1);
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background: rgb(1, 74, 1);
+    color: white;
+    cursor: pointer;
+    transform: scale(1.5);
+}
+
+.card {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background: rgb(74, 154, 104);
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+
+.Belanja,
+.Hotel,
+.Makan,
+.Transport,
+.Tujuan {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: 0.5s ease-in-out;
+}
+.card:hover .Belanja,
+.card:hover .Hotel,
+.card:hover .Makan,
+.card:hover .Transport,
+.card:hover .Tujuan {
+    transform: translateX(80px);
+}
+
+.card:hover {
+    border-radius: 15px;
+    width: 350px;
+    height: 250px;
+}
+
+.text-section {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    width: 180px;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.card:hover .text-section {
+    opacity: 1;
+}
+
+
+
+
+
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* .Belanja {
+    position: absolute;
+    top: -20px;
+    right: -100px;
+    width: 450px;
+    height: auto;
+    object-fit: cover;
+    opacity: 0;
+    rotate: 15deg;
+    transition: all 0.3s ease-in-out;
+
+}
+
+.card:hover .Belanja {
+    opacity: 1;
+} */
+
+/* .card {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background: rgb(74, 154, 104);
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+} */
+
+
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++== */
