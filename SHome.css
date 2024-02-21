@@ -1,0 +1,10 @@
+/* styles.css */
+.carousel-item img {
+    width: 100%;
+    height: auto;
+}
+
+.nav-link:hover {
+    color: #d70b15;
+    transition: color 0.2s ease-in-out;
+}
