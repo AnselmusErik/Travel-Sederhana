@@ -4,6 +4,11 @@
     justify-content: space-around;
 }
 
+.nav-link:hover {
+    color: #00ff22;
+    transition: color 0.2s ease-in-out;
+}
+
 .btn {
     padding: 15px;
     border: none;
@@ -21,6 +26,11 @@
     transform: scale(1.5);
 }
 
+.btn:hover {
+    animation: pulse 1s infinite;
+}
+
+
 .card {
     position: relative;
     display: flex;
@@ -30,9 +40,46 @@
     height: 150px;
     border-radius: 50%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    background: rgb(74, 154, 104);
+    background: rgb(96, 230, 178);
     transition: all 0.5s ease-in-out;
     cursor: pointer;
+}
+
+.card:hover .Belanja,
+.card:hover .Hotel,
+.card:hover .Makan,
+.card:hover .Transport,
+.card:hover .Tujuan {
+    transform: translateX(80px);
+}
+
+.card:hover {
+    border-radius: 15px;
+    width: 350px;
+    height: 250px;
+}
+
+.card:hover .text-section {
+    opacity: 1;
+}
+
+.card {
+    box-shadow: 0 10px 20px rgba(38, 176, 226, 0.433), 0 6px 6px rgba(121, 224, 65, 0.23);
+}
+
+.card {
+    background: linear-gradient(to right, rgb(74, 154, 104), rgb(44, 199, 255));
+}
+
+
+/*-----Baru-----*/
+.card {
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.card.is-flipped {
+    transform: rotateY(180deg);
 }
 
 
@@ -49,18 +96,14 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     transition: 0.5s ease-in-out;
 }
-.card:hover .Belanja,
-.card:hover .Hotel,
-.card:hover .Makan,
-.card:hover .Transport,
-.card:hover .Tujuan {
-    transform: translateX(80px);
-}
 
-.card:hover {
-    border-radius: 15px;
-    width: 350px;
-    height: 250px;
+.Belanja:hover,
+.Hotel:hover,
+.Makan:hover,
+.Transport:hover,
+.Tujuan:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s ease-in-out;
 }
 
 .text-section {
@@ -72,46 +115,68 @@
     transition: all 0.3s ease-in-out;
 }
 
-.card:hover .text-section {
-    opacity: 1;
+.Belanja,
+.Hotel,
+.Makan,
+.Transport,
+.Tujuan {
+    animation: float 2s ease-in-out infinite;
 }
 
-
-
-
-
-/* +++++++++++++++++++++++++++++++++++++++++++++++++++++ */
-
-/* .Belanja {
-    position: absolute;
-    top: -20px;
-    right: -100px;
-    width: 450px;
-    height: auto;
-    object-fit: cover;
-    opacity: 0;
-    rotate: 15deg;
-    transition: all 0.3s ease-in-out;
-
+.Belanja:hover,
+.Hotel:hover,
+.Makan:hover,
+.Transport:hover,
+.Tujuan:hover {
+    animation: spin 2s linear infinite;
 }
 
-.card:hover .Belanja {
-    opacity: 1;
-} */
+@keyframes float {
+    0% {
+        transform: translatey(0px);
+    }
 
-/* .card {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    background: rgb(74, 154, 104);
-    transition: all 0.5s ease-in-out;
-    cursor: pointer;
-} */
+    50% {
+        transform: translatey(-20px);
+    }
 
+    100% {
+        transform: translatey(0px);
+    }
+}
 
-/* +++++++++++++++++++++++++++++++++++++++++++++++++++++== */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 768px) {
+
+    .Belanja,
+    .Hotel,
+    .Makan,
+    .Transport,
+    .Tujuan {
+        width: 100px;
+        height: 100px;
+    }
+}
