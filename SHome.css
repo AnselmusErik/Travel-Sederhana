@@ -5,6 +5,14 @@
 }
 
 .nav-link:hover {
-    color: #d70b15;
+    color: #00ff22;
     transition: color 0.2s ease-in-out;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+h1,
+h2 {
+    font-family: 'Roboto', sans-serif;
+}
+
