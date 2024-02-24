@@ -1,14 +1,18 @@
+/* Container Styles */
 .Container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 }
 
+/* Navigation Styles */
 .nav-link:hover {
     color: #00ff22;
     transition: color 0.2s ease-in-out;
+    transform: scale(1.2);
 }
 
+/* Button Styles */
 .btn {
     padding: 15px;
     border: none;
@@ -24,13 +28,10 @@
     color: white;
     cursor: pointer;
     transform: scale(1.5);
-}
-
-.btn:hover {
     animation: pulse 1s infinite;
 }
 
-
+/* Card Styles */
 .card {
     position: relative;
     display: flex;
@@ -43,14 +44,10 @@
     background: rgb(96, 230, 178);
     transition: all 0.5s ease-in-out;
     cursor: pointer;
-}
-
-.card:hover .Belanja,
-.card:hover .Hotel,
-.card:hover .Makan,
-.card:hover .Transport,
-.card:hover .Tujuan {
-    transform: translateX(80px);
+    box-shadow: 0 10px 20px rgba(38, 176, 226, 0.433), 0 6px 6px rgba(121, 224, 65, 0.23);
+    background: linear-gradient(to right, rgb(74, 154, 104), rgb(44, 199, 255));
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
 }
 
 .card:hover {
@@ -63,26 +60,11 @@
     opacity: 1;
 }
 
-.card {
-    box-shadow: 0 10px 20px rgba(38, 176, 226, 0.433), 0 6px 6px rgba(121, 224, 65, 0.23);
-}
-
-.card {
-    background: linear-gradient(to right, rgb(74, 154, 104), rgb(44, 199, 255));
-}
-
-
-/*-----Baru-----*/
-.card {
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-}
-
 .card.is-flipped {
     transform: rotateY(180deg);
 }
 
-
+/* Image Styles */
 .Belanja,
 .Hotel,
 .Makan,
@@ -95,6 +77,7 @@
     cursor: pointer;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     transition: 0.5s ease-in-out;
+    animation: float 2s ease-in-out infinite;
 }
 
 .Belanja:hover,
@@ -103,9 +86,10 @@
 .Transport:hover,
 .Tujuan:hover {
     transform: scale(1.2);
-    transition: transform 0.3s ease-in-out;
+    animation: spin 2s linear infinite;
 }
 
+/* Text Section Styles */
 .text-section {
     position: absolute;
     top: 10px;
@@ -115,22 +99,7 @@
     transition: all 0.3s ease-in-out;
 }
 
-.Belanja,
-.Hotel,
-.Makan,
-.Transport,
-.Tujuan {
-    animation: float 2s ease-in-out infinite;
-}
-
-.Belanja:hover,
-.Hotel:hover,
-.Makan:hover,
-.Transport:hover,
-.Tujuan:hover {
-    animation: spin 2s linear infinite;
-}
-
+/* Keyframes */
 @keyframes float {
     0% {
         transform: translatey(0px);
@@ -169,8 +138,8 @@
     }
 }
 
+/* Media Queries */
 @media (max-width: 768px) {
-
     .Belanja,
     .Hotel,
     .Makan,
